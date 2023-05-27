@@ -23,7 +23,26 @@ gradlew.bat bootRun
 ./gradlew bootRun
 ```
 
+##### Compilación automática del frontend
+
+La configuración del archivo `build.gradle.kts` obliga a compilar el proyecto
+de frontend (carpeta `web-client`) antes de compilar el backend, de modo que la SPA se incluye en el `.jar` generado por Gradle.
+El resultado es que podemos acceder a la app del cliente web en `localhost:8080/` si lanzamos el servidor de SpringBoot.
+
+
+
 #### Frontend
 
-Para trabajar con el frontend
+Para trabajar con el frontend por separado es posible usar npm desde la carpeta `web-client`:
 
+##### Instalar dependencias
+
+```
+npm install
+```
+
+##### Servidor de desarrollo con autorrecarga
+
+```
+npm run dev
+```
